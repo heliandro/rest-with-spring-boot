@@ -32,4 +32,13 @@ build/
 ### VS Code ###
 .vscode/
 
-.mvn/
+*.class
+
+# SSH Keys
+*.pem
+*.ppk
+
+# Package files
+*.jar
+*.war
+*.ear
