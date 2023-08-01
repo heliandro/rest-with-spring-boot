@@ -14,9 +14,15 @@
 	<name>rest-with-spring-boot</name>
 	<description>API project with Spring Boot</description>
 	<properties>
-		<java.version>20</java.version>
+		<java.version>18</java.version>
 	</properties>
 	<dependencies>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
