@@ -31,17 +31,17 @@ public class MathController {
             throw new UnsupportedMathOperationException("Invalid operation: " + operation);
     }
 
-    private double calculate(String operation, String numberOne, String numberTwo) {
-        Operation op = getOperationFromString(operation);
-        return op.calculate(convertToDouble(numberOne), convertToDouble(numberTwo));
-    }
-
     private Operation getOperationFromString(String operation) {
         try {
             return Operation.valueOf(operation.toUpperCase());
         } catch (IllegalArgumentException e) {
             return null;
         }
+    }
+
+    private double calculate(String operation, String numberOne, String numberTwo) {
+        Operation op = getOperationFromString(operation);
+        return op.calculate(convertToDouble(numberOne), convertToDouble(numberTwo));
     }
 
     private Double convertToDouble(String strNumber) {
@@ -57,7 +57,7 @@ public class MathController {
 
     private boolean isNumeric(String strNumber) {
         if (strNumber == null) return false;
-        
+
         String number = strNumber.replaceAll(",", ".");
         return number.matches("[-+]?[0-9]*\\.?[0-9]+");
     }
