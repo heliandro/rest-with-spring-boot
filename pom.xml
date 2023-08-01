@@ -11,7 +11,7 @@
 	<groupId>br.com.heliandro</groupId>
 	<artifactId>rest-with-spring-boot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>rest-with-spring-boot</name>
+	<name>startup</name>
 	<description>API project with Spring Boot</description>
 	<properties>
 		<java.version>18</java.version>

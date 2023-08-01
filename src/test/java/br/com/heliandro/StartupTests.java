@@ -1,10 +1,10 @@
-package br.com.heliandro.restwithspringboot;
+package br.com.heliandro;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RestWithSpringBootApplicationTests {
+class StartupTests {
 
 	@Test
 	void contextLoads() {

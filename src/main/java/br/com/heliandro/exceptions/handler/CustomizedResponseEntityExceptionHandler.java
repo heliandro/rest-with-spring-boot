@@ -1,4 +1,4 @@
-package br.com.heliandro.restwithspringboot.exceptions.handler;
+package br.com.heliandro.exceptions.handler;
 
 import java.util.Date;
 import org.springframework.http.HttpStatus;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
-import br.com.heliandro.restwithspringboot.exceptions.ExceptionResponse;
-import br.com.heliandro.restwithspringboot.exceptions.UnsupportedMathOperationException;
+import br.com.heliandro.exceptions.ExceptionResponse;
+import br.com.heliandro.exceptions.UnsupportedMathOperationException;
 
 @ControllerAdvice
 @RestController

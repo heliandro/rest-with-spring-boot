@@ -1,4 +1,4 @@
-package br.com.heliandro.restwithspringboot.exceptions;
+package br.com.heliandro.exceptions;
 
 import java.io.Serializable;
 import java.util.Date;
