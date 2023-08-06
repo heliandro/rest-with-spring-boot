@@ -1,1 +1,9 @@
 
+springfox:
+  documentation:
+    swagger-ui:
+      enabled: true
+
+logging:
+  level:
+    org.springframework.web: DEBUG

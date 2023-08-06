@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.heliandro.dto.MathDto;
 import br.com.heliandro.services.MathService;
 import br.com.heliandro.validations.MathValidation;
+import io.swagger.v3.oas.annotations.Operation;
 
 @RestController
 public class MathController {
@@ -18,6 +19,7 @@ public class MathController {
     @Autowired
     private MathValidation mathValidation;
 
+    @Operation(summary = "Calculate numbers by operation")
     @RequestMapping(value = "/{operation}/{numberOne}/{numberTwo}", method = RequestMethod.GET)
     public MathDto calculator(@PathVariable(value = "operation") String operation,
             @PathVariable(value = "numberOne") String numberOne,
