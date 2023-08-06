@@ -1,4 +1,7 @@
-package br.com.heliandro;
+package br.com.heliandro.enums;
+
+import br.com.heliandro.exceptions.MathOperationException;
+import br.com.heliandro.interfaces.MathOperation;
 
 public enum Operation implements MathOperation {
     ADDITION {
@@ -22,6 +25,8 @@ public enum Operation implements MathOperation {
     DIVISION {
         @Override
         public double calculate(double numberOne, double numberTwo) {
+            if (numberTwo == 0)
+                throw new MathOperationException("Division by zero is not allowed.");
             return numberOne / numberTwo;
         }
     },
