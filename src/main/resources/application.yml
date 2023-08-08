@@ -1,9 +1,3 @@
-
-springfox:
-  documentation:
-    swagger-ui:
-      enabled: true
-
-logging:
-  level:
-    org.springframework.web: DEBUG
+spring:
+  profiles:
+    active: @activatedProperties@
