@@ -27,7 +27,7 @@ public class MathControllerIntegrationTest {
         double expectedResult = 15.0;
 
         // Act & Assert
-        mockMvc.perform(get("/{operation}/{numberOne}/{numberTwo}", operation, numberOne, numberTwo))
+        mockMvc.perform(get("/calculator/{operation}/{numberOne}/{numberTwo}", operation, numberOne, numberTwo))
             .andExpect(status().isOk())
             .andExpect(jsonPath("$.result").value(expectedResult));
     }
