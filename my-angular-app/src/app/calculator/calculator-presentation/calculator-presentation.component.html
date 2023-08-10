@@ -1,0 +1,15 @@
+<div class="calculator">
+    <select [(ngModel)]="operation" class="operation-select">
+        <option value="addition">Addition</option>
+        <option value="subtraction">Subtraction</option>
+        <option value="multiplication">Multiplication</option>
+        <option value="division">Division</option>
+        <option value="square_root">Square Root</option>
+    </select>
+    <input [(ngModel)]="numberOne" placeholder="Number One">
+    <input [(ngModel)]="numberTwo" placeholder="Number Two">
+    <button (click)="onCalculateClicked()">Calculate</button>
+    <div *ngIf="result !== undefined" class="result">
+        Result: <span class="result-value">{{ result }}</span>
+    </div>
+</div>

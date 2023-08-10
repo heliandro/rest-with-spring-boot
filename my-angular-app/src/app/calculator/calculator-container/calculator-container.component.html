@@ -1,0 +1,6 @@
+<h2 class="page-title">Calculator Page</h2>
+
+<app-calculator-presentation
+  [result]="result"
+  (calculateClicked)="performCalculation($event.operation, $event.numberOne, $event.numberTwo)">
+</app-calculator-presentation>
