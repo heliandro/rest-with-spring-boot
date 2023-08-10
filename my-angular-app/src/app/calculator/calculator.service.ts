@@ -6,12 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CalculatorService {
-  private baseUrl = 'http://calculator.127.0.0.1.nip.io:8080';
+  private baseUrl = 'http://calculator.127.0.0.1.nip.io';
 
   constructor(private http: HttpClient) {}
 
   calculate(operation: string, numberOne: number, numberTwo: number): Observable<{ result: number }> {
-    const url = `${this.baseUrl}/calculator/${operation}/${numberOne}/${numberTwo}`;
+    const url = `${this.baseUrl}/api/${operation}/${numberOne}/${numberTwo}`;
     return this.http.get<{ result: number }>(url);
   }
 }
