@@ -10,7 +10,7 @@
 	</parent>
 
 	<groupId>br.com.heliandro</groupId>
-	<artifactId>rest-api-with-spring-boot</artifactId>
+	<artifactId>calculator-api-spring-boot</artifactId>
 	<version>1.0.0</version>
 	<name>startup</name>
 	<description>API project with Spring Boot</description>

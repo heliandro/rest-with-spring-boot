@@ -35,7 +35,7 @@
             "scripts": []
           },
           "configurations": {
-            "production": {
+            "prd": {
               "budgets": [
                 {
                   "type": "initial",
@@ -48,30 +48,62 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prd.ts"
+                }
+              ],
+              "outputPath": "dist/prd"
             },
-            "development": {
+            "uat": {
               "buildOptimizer": false,
               "optimization": false,
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.uat.ts"
+                }
+              ],
+              "outputPath": "dist/uat"
+            },
+            "dev": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.dev.ts"
+                }
+              ],
+              "outputPath": "dist/dev"
             }
           },
-          "defaultConfiguration": "production"
+          "defaultConfiguration": "dev"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
-            "production": {
-              "browserTarget": "my-angular-app:build:production"
+            "prd": {
+              "browserTarget": "my-angular-app:build:prd"
             },
-            "development": {
-              "browserTarget": "my-angular-app:build:development"
+            "uat": {
+              "browserTarget": "my-angular-app:build:uat"
+            },
+            "dev": {
+              "browserTarget": "my-angular-app:build:dev"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "dev"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
